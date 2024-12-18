@@ -1,0 +1,120 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header,
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+.btn {
+  width: 120px;
+  height: 40px;
+  border: solid 2px white;
+  color: white;
+  border-radius: 10px;
+  background-color: black;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  animation: backgroundChange 10s infinite alternate;
+  transition: background-color 1s ease;
+}
+
+#movie-form-container {
+  width: 400px;
+  height: 450;
+  border: none;
+}
+
+#movie-form {
+  width: 350px;
+}
+
+/* changing colors from 0 - 100% as timer counts down*/
+@keyframes backgroundChange {
+  0% {
+    background: rgb(180, 237, 180);
+  }
+  50% {
+    background: #feb47b;
+  }
+  100% {
+    background: rgb(94, 214, 216);
+  }
+}
+
+#countdown {
+  font-size: 3em;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.movie-row img {
+  width: 100px;
+  height: auto;
+  margin-right: 1em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-row img:hover {
+  transform: scale(1.1);
+}
+
+form label {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+#confirmation-message {
+  color: green;
+  font-size: 2em;
+  text-align: center;
+}
+
+@keyframes spinAndShrink {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.booked {
+  animation: spinAndShrink 2s forwards;
+}

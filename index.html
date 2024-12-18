@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Movie Booking</h1>
+    </header>
+
+    <main>
+      <div class="countdown">
+        <h2 id="countdown"></h2>
+      </div>
+
+      <div id="movie-form-container" class="hidden">
+        <form id="movie-form">
+          <div class="movie-row">
+            <label>
+              <input type="radio" name="movie" value="Lion King" />
+              <img src="images/lion-king.jpg" alt="Lion King" />
+              <p>The Lion King</p>
+            </label>
+          </div>
+          <div class="movie-row">
+            <label>
+              <input type="radio" name="movie" value="Top Gun" />
+              <img src="images/top-gun.jpg" alt="Top Gun" />
+              <p>Top Gun</p>
+            </label>
+          </div>
+          <div class="movie-row">
+            <label>
+              <input type="radio" name="movie" value="Batman" />
+              <img src="images/batman.jpg" />
+              <p>Batman</p>
+            </label>
+          </div>
+          <button class="btn" type="submit">Book Movie</button>
+        </form>
+      </div>
+
+      <div id="confirmation-message" class="hidden">
+        <h2>You have successfully booked your movie</h2>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Idowu Adeniyi Movie Booking. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
